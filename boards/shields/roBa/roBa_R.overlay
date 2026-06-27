@@ -22,6 +22,15 @@
     };
 };
 
+&trackball_listener {
+    input-processors = <&zip_mouse_gesture>;
+
+    gesture_layer {
+        layers = <7>;
+        input-processors = <&zip_mouse_gesture_always>;
+    };
+};
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {

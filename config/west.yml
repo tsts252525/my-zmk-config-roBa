@@ -17,5 +17,8 @@ manifest:
     - name: zmk-layout-shift
       remote: kot149
       revision: v2
+    - name: zmk-mouse-gesture
+      remote: kot149
+      revision: v1
   self:
     path: config
