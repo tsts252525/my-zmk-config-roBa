@@ -22,12 +22,23 @@
     };
 };
 
+// ジェスチャーレイヤー(7/8/9)に遷移している間だけ、トラックボールの入力を
+// 各レイヤー専用のマウスジェスチャープロセッサに切り替える。
+// 各プロセッサは suppress-movement 付きなので、この間カーソルは固定される。
 &trackball_listener {
-    input-processors = <&zip_mouse_gesture>;
-
-    gesture_layer {
+    gesture_l7 {
         layers = <7>;
-        input-processors = <&zip_mouse_gesture_always>;
+        input-processors = <&zip_mouse_gesture_l7>;
+    };
+
+    gesture_l8 {
+        layers = <8>;
+        input-processors = <&zip_mouse_gesture_l8>;
+    };
+
+    gesture_l9 {
+        layers = <9>;
+        input-processors = <&zip_mouse_gesture_l9>;
     };
 };
 
