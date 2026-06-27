@@ -62,18 +62,8 @@
         };
 
         mkp_button1 {
-            bindings = <&mkp MB1>;
-            key-positions = <18 19>;
-        };
-
-        mkp_button2 {
-            bindings = <&mkp MB2>;
-            key-positions = <19 20>;
-        };
-
-        mkp_button3 {
             bindings = <&mkp MB3>;
-            key-positions = <18 20>;
+            key-positions = <31 32>;
         };
     };
 
@@ -101,6 +91,7 @@
         // layout_shift_kp_override.dtsi を include する方式だと behaviors.dtsi より
         // 前に置かれて上書きが無効化される。これを避けるため、上書き定義を
         // 本文の behaviors に直接置く（本文は常に全 include より後ろ＝確実に有効）。
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -119,9 +110,9 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &lt_to_layer_0 8 P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &kp J  &kp K      &kp L    &lt 9 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 5 I   &kp O     &lt_to_layer_0 8 P
+&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &kp J  &kp K     &kp L     &lt 9 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 7 SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
