@@ -70,6 +70,11 @@
             bindings = <&kp ESC>;
             key-positions = <1 2>;
         };
+
+        Caps {
+            bindings = <&kp CAPS>;
+            key-positions = <10 22>;
+        };
     };
 
     macros {
